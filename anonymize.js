@@ -13,7 +13,6 @@ function removePersonalData(text, language) {
   for (var i = 0; rules && i < rules.length; ++i) {
     var rule = rules[i];
     if (rule.type == 'list') {
-      console.log(rule)
       for (var j = 0; j < rule.data.length; ++j) {
         var text2 = text.toLowerCase().replace(/[\ \.\,\?\;\!\)\(]/g, " ") + " ";
         while (text2.indexOf(" " + rule.data[j] + " ") > -1) {
@@ -28,9 +27,7 @@ function removePersonalData(text, language) {
       }
     }
     if (rule.type == 'regexp') {
-      console.log(rule.data);
       var matches = text.match(rule.data);
-      console.log(matches);
       
       for (var j =0;matches && j < matches.length; ++j) {
         var key = rule.name + '_' + (Math.random() * 100000 | 0);
@@ -93,7 +90,6 @@ function laodDictionaries() {
         item.data = new RegExp(data, 'ig');
       }
       dictionary.push(item);
-      console.log(item.type, item.name, "loaded for ", languages[i]);
     }
 
     DICTIONARIES[languages[i].toLowerCase()] = dictionary;

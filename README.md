@@ -10,13 +10,13 @@
 # Example of Usage
 ```javascript
 var Anonymize = require('anonymize-personal-data');
-
-var anoymizedData = 
+ 
+var anonymizedData = 
   Anonymize.removePersonalData("Je vais a Paris ce weekend et mon email est foo@bar.com", "fr");
-
-var unAnoymizedData = Anonymize.restorePersonalData(anoymizedData.text, anoymizedData.data);
-
-console.log(annoymizedData, restored);
+ 
+var unAnoymizedData = Anonymize.restorePersonalData(anonymizedData.text, anonymizedData.data);
+ 
+console.log(anonymizedData, unAnoymizedData);
 
 ```
 
