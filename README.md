@@ -8,8 +8,7 @@
 ```
 
 # Example of Usage
-```
-
+```javascript
 var Anonymize = require('anonymize-personal-data');
 
 var anoymizedData = 
@@ -28,7 +27,7 @@ This module contain 2 methods :
 ## removePersonalData
 
 This method take a string in entry and a local and return an object with a text field containing an anonymized string
-```
+```javascript
 var data =  Anonymize.removePersonalData("STRING", "local");
 console.log(data)
 ```
@@ -36,7 +35,7 @@ console.log(data)
 ## restorePersonalData
 
 This method allow for easy de-anonynization of a string.
-```
+```javascript
 var originalString = Anonymize.restorePersonalData(anoymizedData.text, anoymizedData.data);
 ```
 
