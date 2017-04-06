@@ -47,6 +47,21 @@ For now the tool support the local 'fr' (France) with the following data :
 - All French zipcode
 - All French Phone number
 - All email address
+- French Vehicule registration number
+- French National healthcare number (SECU)
+
+For now the tool support the local 'uk' (United Kingdom) with the following data :
+- UK name and lastname according to internet
+- All UK Town name
+- All UK County name
+- All UK zipcode
+- All UK Phone number
+- All email address
+- UK Vehicule registration number
+- UK National healthcare number (NIH)
+- UK VAT numbers
+- UK Child Benefits Regference number
+
 
 # Extending to more language / type of data
 
