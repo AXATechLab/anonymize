@@ -10,6 +10,7 @@ var DATA_VAULT = {};
 function removePersonalData(text, language) {
   var rules = DICTIONARIES[language.toLowerCase()];
   var data = {};
+  var keyCount =0;
   for (var i = 0; rules && i < rules.length; ++i) {
     var rule = rules[i];
     if (rule.type == 'list') {
@@ -19,7 +20,7 @@ function removePersonalData(text, language) {
           var start = text2.indexOf(" " + rule.data[j] + " ");
           var len = rule.data[j].length;
           var value = text.substring(start + 1, start + len + 1);
-          var key = rule.name + '_' + (Math.random() * 100000 | 0);
+          var key = rule.name + '_' + keyCount++;
           data[key] = value;
           text = text.substring(0, start + 1) + key  + text.substring(start + len + 1);
           text2 = text.toLowerCase().replace(/[\ \.\,\?\;\!\)\(]/g, " ") + " ";
@@ -30,7 +31,7 @@ function removePersonalData(text, language) {
       var matches = text.match(rule.data);
       
       for (var j =0;matches && j < matches.length; ++j) {
-        var key = rule.name + '_' + (Math.random() * 100000 | 0);
+        var key = rule.name + '_' + keyCount++;
         data[key] = matches[j];
         text = text.replace(matches[j], key);
       }
