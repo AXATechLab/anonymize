@@ -13,6 +13,7 @@ function removePersonalData(text, language) {
   var keyCount =0;
   for (var i = 0; rules && i < rules.length; ++i) {
     var rule = rules[i];
+
     if (rule.type == 'list') {
       for (var j = 0; j < rule.data.length; ++j) {
         var text2 = text.toLowerCase().replace(/[\ \.\,\?\;\!\)\(]/g, " ") + " ";
