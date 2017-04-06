@@ -1,11 +1,11 @@
 {
-  "name": "privacy-shield",
+  "name": "anonymize-personal-data",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "anonymize.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "pierre-loic.doulcet@axa-tech.com",
   "license": "ISC"
 }
